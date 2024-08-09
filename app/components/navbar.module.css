@@ -1,0 +1,119 @@
+.navBar {
+  top: 0;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  height: 4rem;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.navBarLeadingDesktop,
+.navBarTrailing {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.navBarLeadingDesktop {
+    gap: 0.5rem;
+}
+
+.navBarLeadingMobile {
+  display: none;
+}
+
+.searchInputContainer {
+  display: flex;
+  max-width: 800px;
+  width: 100%;
+  flex-direction: row;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+
+.searchInputContainer:focus-within {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  background-color: white;
+}
+
+.searchInput {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 3rem;
+  font-size: 16px;
+}
+
+.searchInput::placeholder {
+  font-size: 1rem;
+  color: #888;
+}
+
+.menuContainer {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  display: flex;
+  flex-direction: column;
+  top: 68px;
+  position: fixed;
+  left: 1rem;
+  z-index: 100s;
+}
+
+.navLink {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 2rem;
+  padding: 0.5rem;
+  color: black;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.navLink:hover,
+.navLink:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.navLink:active {
+  background-color: rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+  .navBarLeadingDesktop {
+    display: none;
+  }
+
+  .navBarLeadingMobile {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+  }
+  
+  .navBarLeadingMobile {
+      gap: 0.5rem;
+  }
+
+  .navLink {
+    width: 200px;
+    text-align: start;
+  }
+}
