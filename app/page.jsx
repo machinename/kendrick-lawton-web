@@ -13,65 +13,35 @@ export default function Page() {
           Kendrick Lawton
         </h1>
         <p>
-          Kansas City, Missouri
+          I Engineer Solutions &amp; Automate Processes. I&apos;m currently a Test Automation Specialist and have a BS in Software Engineering.
         </p>
         <p>
-          I Engineer Solutions & Automate Processes. I'm currently a Test Automation Specialist and have a BS in Software Engineering.
-        </p>
-        <p>
-          Professional I have significant experience building test automation framworks utilizing techonlogies just as Playwright for .Net and Seleiumn.
+          Professional I have significant experience building test automation frameworks utilizing techonlogies just as Playwright for .Net.
         </p>
       </Element>
       <Element className={styles.elementExperience} name="/experience" >
         <h1>Experience</h1>
-        <p>Work</p>
+        <h2>Work</h2>
         <p>Clyde & Co - Test Automation Specialist, April 2023 - Present</p>
-        <p>Education</p>
+        <p>Since starting in this role, I&rsquo;ve deepened my expertise in testing web-based and client/server applications. Leading automation projects has honed my skills in creating and executing test scripts, while collaborating with clients has improved my ability to translate their needs into effective test plans.</p>
+        <p>Managing sprint schedules and work allocation has strengthened my project management skills, ensuring timely and high-quality project delivery. These experiences have significantly enhanced both my technical proficiency and overall project execution.</p>
+        <h2>Education</h2>
         <p>Arizona State University - Bachelor of Science in Software Engineering (BSSE)</p>
-        <p>Certifications</p>
+        <h2>Certifications</h2>
         <p>ISTQB - Certified Tester Foundation Level (CTFL)</p>
       </Element>
       <Element className={styles.elementProject} name="/projects">
-        <div>
+        <Link href="https://github.com/machinename" target="_blank" rel="noopener noreferrer" className={styles.navLink}>
           <h1>Projects</h1>
-        </div>
-        <div className={styles.elementProjectContainer}>
-          <Paper className={styles.project}>
-            <div className={styles.projectHeader}>
-              <h2>File Note</h2>
-            </div>
-            <div className={styles.projectContent}>
-              <h2>Content</h2>
-            </div>
-            <div className={styles.projectFooter}>
-              <div className={styles.projectTech}>
-                <p>Firebase GCP JavaScript Next.js </p>
-              </div>
-              <div className={styles.projectLinks}>
-                <Link className={styles.navLink} href='https://github.com/machinename/file-note' target="_blank" rel="noopener noreferrer">
-                  View Code</Link> <Link className={styles.navLink} href='' target="_blank" rel="noopener noreferrer">Visit Site</Link>
-              </div>
-            </div>
-          </Paper>
-          <Paper className={styles.project}>
-            <div className={styles.projectHeader}>
-              <h2>Mini ML</h2>
-            </div>
-            <div className={styles.projectContent}>
-              <h2>Content</h2>
-            </div>
-            <div className={styles.projectFooter}>
-              <div className={styles.projectTech}>
-                <p>Dart Flask Flutter Firebase GCP Python</p>
-              </div>
-              <div className={styles.projectLinks}>
-                <Link className={styles.navLink} href='https://github.com/machinename/mini_ml' target="_blank" rel="noopener noreferrer">
-                  View Code</Link>
-                <Link className={styles.navLink} href='' target="_blank" rel="noopener noreferrer">Visit Site</Link>
-              </div>
-            </div>
-          </Paper>
-        </div>
+        </Link>
+        <h2>Nesta Note</h2>
+        <p>Nesta Note is a note-taking app inspired by Google Keep, built with JavaScript, HTML, and CSS. It allows you to nest notes within notes and customize backgrounds and colors. It uses Firebase and Google Cloud for backend services and future updates will add more features.</p>
+
+        <h2>Mini ML</h2>
+        <p>Mini ML is a machine learning platform built with Flutter, Dart, Python, Flask, and hosted on Firebase and Google Cloud App Engine. It offers simple tools for training regression and classification models, with plans to include image processing and object recognition.</p>
+
+        <h2>kendricklawton.com</h2>
+        <p>My personal portfolio created with Next.js, featuring my web development projects and technical insights.</p>
       </Element>
     </>
   );

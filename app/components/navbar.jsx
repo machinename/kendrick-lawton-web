@@ -18,25 +18,37 @@ export function Navbar() {
   };
 
   useEffect(() => {
-    // Function to handle clicks outside of the menu
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
         setIsLinkMenuOpen(false);
       }
     };
 
-    // Attach the event listener
     document.addEventListener('mousedown', handleClickOutside);
 
-    // Cleanup the event listener on component unmount
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <nav className={styles.navBar}>
+         <nav className={isScrolled ? styles.navBarScrolled : styles.navBar}>
         {/* Nav Leading Desktop */}
         <div className={styles.navBarLeadingDesktop}>
           <ScrollLink className={styles.navLink} to="/" smooth={true} >Home</ScrollLink>
