@@ -15,6 +15,9 @@ export default function Page() {
         <p>
           I Engineer Solutions &amp; Automate Processes. I&apos;m currently a Test Automation Specialist and have a BS in Software Engineering.
         </p>
+        <p>
+          Professionally I have significant experience building test automation frameworks utilizing techonlogies just as Playwright for .Net.
+        </p>
       </Element>
       <Element className={styles.elementExperience} name="/experience" >
         <h1>Experience</h1>
