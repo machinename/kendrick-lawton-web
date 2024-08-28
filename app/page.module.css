@@ -3,8 +3,8 @@
 .elementProject {
   height: 100vh;
   min-height: 600px;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   max-width: 600px;
   display: flex;
 
@@ -21,29 +21,60 @@
 .elementHome h1,
 .elementExperience h1,
 .elementProject h1 {
-  padding-bottom: 1rem;
   margin: 0;
+  padding-bottom: 1rem;
   font-weight: 300;
 }
 
-
 .elementHome h2,
 .elementExperience h2,
-.elementProject h2,
+.elementProject h2 {
+  padding-bottom: 1rem;
+  margin: 0;
+
+  font-weight: 200;
+}
+
+
 .elementHome p,
 .elementExperience p,
 .elementProject p {
+  margin: 0;
   padding-bottom: 1rem;
   font-weight: 200;
-  margin: 0;
 }
+
 
 .navLink {
   text-decoration: none;
   color: black;
-  margin: 0;
 }
 
 .navLink:hover {
   text-decoration: underline;
 }
+
+.textLink {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 0.25rem;
+  border: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+  margin-left: 0.25rem;
+  padding: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25;
+  color: #111827;
+  text-decoration: none;
+}
+
+.textLink.dark {
+  border-color: #374151;
+  background-color: #1f2937;
+  color: #f9fafb;
+}
+
+.textLink:hover {
+  text-decoration: none;
+}
+
