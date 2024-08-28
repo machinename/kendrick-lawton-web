@@ -13,7 +13,7 @@ export default function Page() {
           Kendrick Lawton | Playwright Expert
         </h1>
         <p>
-          I Engineer Solutions &amp; Automate Processes. I&apos;m currently a Test Automation Specialist and have a BS in Software Engineering.
+          I&apos;m currently a Test Automation Specialist and have a BS in Software Engineering.
         </p>
         <p>
           Professionally I have significant experience building test automation frameworks utilizing technologies such as Playwright for .NET.
