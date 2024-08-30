@@ -38,11 +38,11 @@ export default function Page() {
         <Link href="https://github.com/machinename" target="_blank" rel="noopener noreferrer" className={styles.navLink}>
           <h1>Projects</h1>
         </Link>
+        <Link href="https://github.com/machinename" target="_blank" rel="noopener noreferrer" className={styles.navLink}>
         <h2>Nesta Note</h2>
+        </Link>
         <p>A note-taking app inspired by Google Keep but with the ability to create notes within notes.</p>
         <p>Tech -
-          <Link href="https://firebase.google.com/" target="_blank" rel="noopener noreferrer" className={styles.textLink}><Image alt=''  />Firebase</Link>
-          <Link href="https://cloud.google.com/appengine" target="_blank" rel="noopener noreferrer" className={styles.textLink}>Google App Engine</Link>
           <Link href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" className={styles.textLink}>JavaScript</Link>
           <Link href="https://mui.com/" target="_blank" rel="noopener noreferrer" className={styles.textLink}>MUI</Link>
           <Link href="https://nextjs.org/" target="_blank" rel="noopener noreferrer" className={styles.textLink}>Next.js</Link>
