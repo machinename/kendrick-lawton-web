@@ -6,8 +6,6 @@ import styles from './page.module.css'
 import { ModelTraining, ModelTrainingOutlined, ModelTrainingTwoTone } from '@mui/icons-material';
 import Image from 'next/image';
 
-
-
 export default function Page() {
   return (
     <>
@@ -43,7 +41,7 @@ export default function Page() {
         <h2>Nesta Note</h2>
         <p>A note-taking app inspired by Google Keep but with the ability to create notes within notes.</p>
         <p>Tech -
-          <Link href="https://firebase.google.com/" target="_blank" rel="noopener noreferrer" className={styles.textLink}>Firebase</Link>
+          <Link href="https://firebase.google.com/" target="_blank" rel="noopener noreferrer" className={styles.textLink}><Image alt=''  />Firebase</Link>
           <Link href="https://cloud.google.com/appengine" target="_blank" rel="noopener noreferrer" className={styles.textLink}>Google App Engine</Link>
           <Link href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" className={styles.textLink}>JavaScript</Link>
           <Link href="https://mui.com/" target="_blank" rel="noopener noreferrer" className={styles.textLink}>MUI</Link>
