@@ -1,10 +1,7 @@
 'use client'
-import { Paper } from '@mui/material';
 import { Element } from 'react-scroll';
 import Link from 'next/link';
 import styles from './page.module.css'
-import { ModelTraining, ModelTrainingOutlined, ModelTrainingTwoTone } from '@mui/icons-material';
-import Image from 'next/image';
 
 export default function Page() {
   return (
@@ -38,7 +35,7 @@ export default function Page() {
         <Link href="https://github.com/machinename" target="_blank" rel="noopener noreferrer" className={styles.navLink}>
           <h1>Projects</h1>
         </Link>
-        <Link href="https://github.com/machinename" target="_blank" rel="noopener noreferrer" className={styles.navLink}>
+        <Link href="https://www.nestanote.com/" target="_blank" rel="noopener noreferrer" className={styles.navLink}>
         <h2>Nesta Note</h2>
         </Link>
         <p>A note-taking app inspired by Google Keep but with the ability to create notes within notes.</p>
@@ -49,7 +46,9 @@ export default function Page() {
           <Link href="https://react.dev/" target="_blank" rel="noopener noreferrer" className={styles.textLink}>React</Link>
           <Link href="https://vercel.com/" target="_blank" rel="noopener noreferrer" className={styles.textLink}>Vercel</Link>
         </p>
-        <h2>Mini ML</h2>
+        <Link href="https://github.com/machinename/mini_ml" target="_blank" rel="noopener noreferrer" className={styles.navLink}>
+          <h2>Mini ML</h2>
+        </Link>
         <p>A machine learning platform offering simple tools for training regression and classification models.</p>
         <p>Tech -
           <Link href="https://dart.dev/" target="_blank" rel="noopener noreferrer" className={styles.textLink}>Dart</Link>
