@@ -1,11 +1,9 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "./components/navbar";
-import { Footer } from "./components/footer";
+import { Header } from "./components/Header";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  // metadataBase: new URL(baseUrl),
   title: 'Kendrick Lawton',
   description: 'Kendrick Lawton Portfolio',
   openGraph: {
@@ -34,7 +32,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         className={inter.className}>
-        <Navbar />
+        <Header />
         <main>
           {children}
         </main>

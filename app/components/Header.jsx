@@ -1,7 +1,6 @@
 'use client'
-import { AccountCircleOutlined, ChatBubbleOutline, ChatOutlined, ChatRounded, Close, ContactMail, ContactMailOutlined, ContactPage, ContactSupportOutlined, DarkMode, Dashboard, GitHub, LightMode, LightModeTwoTone, LinkedIn, MailRounded, Menu, Search, Settings } from '@mui/icons-material';
+import { Close,  GitHub, LinkedIn, MailRounded, Menu } from '@mui/icons-material';
 import { IconButton } from '@mui/material';
-import { usePathname } from 'next/navigation'
 import Link from 'next/link';
 import { Link as ScrollLink, Element } from 'react-scroll';
 import React, { useEffect, useState, useRef } from 'react';
