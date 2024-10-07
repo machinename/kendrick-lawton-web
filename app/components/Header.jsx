@@ -4,7 +4,7 @@ import { IconButton } from '@mui/material';
 import Link from 'next/link';
 import { Link as ScrollLink, Element } from 'react-scroll';
 import React, { useEffect, useState, useRef } from 'react';
-import styles from "./navbar.module.css";
+import styles from "./Header.module.css";
 
 export function Navbar() {
   const [isLinkMenuOpen, setIsLinkMenuOpen] = useState(false);
