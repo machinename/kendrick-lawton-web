@@ -1,4 +1,5 @@
 'use client'
+
 import { Element } from 'react-scroll';
 import Link from 'next/link';
 import styles from './page.module.css'

@@ -1,25 +1,26 @@
-'use client'
-import { Close,  GitHub, LinkedIn, MailRounded, Menu } from '@mui/icons-material';
-import { IconButton } from '@mui/material';
+"use client"
+
+import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
-import { Link as ScrollLink, Element } from 'react-scroll';
-import React, { useEffect, useState, useRef } from 'react';
+import { IconButton } from '@mui/material';
+import { Link as ScrollLink } from 'react-scroll';
+import { Close, GitHub, LinkedIn, MailRounded, MenuOpen } from '@mui/icons-material';
+
 import styles from "./Header.module.css";
 
-export function Header() {
-  const [isLinkMenuOpen, setIsLinkMenuOpen] = useState(false);
-  const menuRef = useRef(null);
+export default function Header() {
+  const [isNavMenuOpen, setIsNavMenuOpen] = useState(false);
+  const navMenuRef = useRef(null);
   const [isScrolled, setIsScrolled] = useState(false);
 
-
-  const toggleLinkMenu = () => {
-    setIsLinkMenuOpen(!isLinkMenuOpen);
+  const toggleNavMenu = () => {
+    setIsNavMenuOpen(prev => !prev);
   };
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
-        setIsLinkMenuOpen(false);
+      if (navMenuRef.current && !navMenuRef.current.contains(event.target)) {
+        setIsNavMenuOpen(false);
       }
     };
 
@@ -46,48 +47,43 @@ export function Header() {
   }, []);
 
   return (
-    <>
-         <nav className={isScrolled ? styles.navBarScrolled : styles.navBar}>
-        {/* Nav Leading Desktop */}
-        <div className={styles.navBarLeadingDesktop}>
-          <ScrollLink className={styles.navLink} to="/" smooth={true} >Home</ScrollLink>
-          <ScrollLink className={styles.navLink} to="/experience" smooth={true}>Experience</ScrollLink>
-          <ScrollLink className={styles.navLink} to="/projects" smooth={true}>Projects</ScrollLink>
-        </div>
-        {/* Nav Leading Mobile */}
-        <div className={styles.navBarLeadingMobile}>
-          <IconButton onClick={toggleLinkMenu}>
-            {isLinkMenuOpen ? <Close /> : <Menu />}
+    <header className={isScrolled ? styles.headerScrolled : styles.header}>
+      {/* Nav Leading */}
+      <div className={styles.headerLeading}>
+        <div className={styles.navMobile}>
+          <IconButton onClick={toggleNavMenu}>
+            {isNavMenuOpen ? <Close /> : <MenuOpen />}
           </IconButton>
-          {/* <div>
-            <p>{linkTitle}</p>
-          </div> */}
+          {isNavMenuOpen && (
+            <nav className={styles.menu} ref={navMenuRef}>
+              <ScrollLink className={styles.navLink} to="/" smooth={true}>Home</ScrollLink>
+              <ScrollLink className={styles.navLink} to="/experience" smooth={true} >Experience</ScrollLink>
+              <ScrollLink className={styles.navLink} to="/projects" smooth={true}>Projects</ScrollLink>
+            </nav>
+          )}
         </div>
-
-        {/* Nav Trailing*/}
-        <div className={styles.navBarTrailing}>
-          <Link href='https://github.com/machinename' target="_blank" rel="noopener noreferrer">
-            <IconButton>
-              <GitHub />
-            </IconButton>
-          </Link>
-          <Link href='https://github.com/machinename' target="_blank" rel="noopener noreferrer">
-            <IconButton>
-              <LinkedIn />
-            </IconButton>
-          </Link>
-          <IconButton>
-            <MailRounded />
-          </IconButton>
-        </div>
-      </nav>
-      {isLinkMenuOpen && (
-        <div  ref={menuRef} className={styles.menuContainer}>
+        <div className={styles.navDesktop}>
           <ScrollLink className={styles.navLink} to="/" smooth={true}>Home</ScrollLink>
           <ScrollLink className={styles.navLink} to="/experience" smooth={true} >Experience</ScrollLink>
           <ScrollLink className={styles.navLink} to="/projects" smooth={true}>Projects</ScrollLink>
         </div>
-      )}
-    </>
+      </div>
+      {/* Nav Trailing */}
+      <div className={styles.headerTrailing}>
+        <Link href='https://github.com/machinename' target="_blank" rel="noopener noreferrer">
+          <IconButton>
+            <GitHub />
+          </IconButton>
+        </Link>
+        <Link href='https://github.com/machinename' target="_blank" rel="noopener noreferrer">
+          <IconButton>
+            <LinkedIn />
+          </IconButton>
+        </Link>
+        <IconButton>
+          <MailRounded />
+        </IconButton>
+      </div>
+    </header>
   );
 }
