@@ -32,13 +32,11 @@ export default function Page() {
         <p>ISTQB - Certified Tester Foundation Level (CTFL)</p>
       </Element>
       <Element className={styles.elementProject} name="/projects">
-        <Link href="https://github.com/machinename" target="_blank" rel="noopener noreferrer" className={styles.navLink}>
-          <h1>Projects</h1>
-        </Link>
+        <h1>Projects</h1>
         <Link href="https://www.nestanote.com/" target="_blank" rel="noopener noreferrer" className={styles.navLink}>
-        <h2>Nesta Note</h2>
+          Nesta Note
         </Link>
-        <p>A note-taking app inspired by Google Keep but with the ability to create notes within notes.</p>
+        <p>An easy to use note-taking app with the ability to create notes within notes.</p>
         <p>Tech -
           <Link href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" className={styles.textLink}>JavaScript</Link>
           <Link href="https://mui.com/" target="_blank" rel="noopener noreferrer" className={styles.textLink}>MUI</Link>
@@ -47,7 +45,7 @@ export default function Page() {
           <Link href="https://vercel.com/" target="_blank" rel="noopener noreferrer" className={styles.textLink}>Vercel</Link>
         </p>
         <Link href="https://github.com/machinename/mini_ml" target="_blank" rel="noopener noreferrer" className={styles.navLink}>
-          <h2>Mini ML</h2>
+          Mini ML
         </Link>
         <p>A machine learning platform offering simple tools for training regression and classification models.</p>
         <p>Tech -
@@ -58,10 +56,13 @@ export default function Page() {
           <Link href="https://cloud.google.com/appengine" target="_blank" rel="noopener noreferrer" className={styles.textLink}>Google App Engine</Link>
           <Link href="https://www.python.org/" target="_blank" rel="noopener noreferrer" className={styles.textLink}>Python</Link>
         </p>
-        <h2>kendricklawton.com</h2>
-        <p>My personal portfolio created with Next.js, featuring my web development projects and technical insights.</p>
+        <Link href="https://papertake.io" target="_blank" rel="noopener noreferrer" className={styles.navLink}>
+          Paper Take
+        </Link>
+        <p>An online tool for effortless idea creation. Designed with a minimalist approach, our web app allows you to focus on your ideas without the clutter. Easily jot down thoughts, organize tasks, and manage projects in a clean, intuitive interface. </p>
         <p>Tech -
-          <Link href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" className={styles.textLink}>JavaScript</Link>
+          <Link href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer" className={styles.textLink}>TypeScript</Link>
+          <Link href="https://firebase.google.com/" target="_blank" rel="noopener noreferrer" className={styles.textLink}>Firebase</Link>
           <Link href="https://mui.com/" target="_blank" rel="noopener noreferrer" className={styles.textLink}>MUI</Link>
           <Link href="https://nextjs.org/" target="_blank" rel="noopener noreferrer" className={styles.textLink}>Next.js</Link>
           <Link href="https://react.dev/" target="_blank" rel="noopener noreferrer" className={styles.textLink}>React</Link>
