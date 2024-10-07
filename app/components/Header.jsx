@@ -6,7 +6,7 @@ import { Link as ScrollLink, Element } from 'react-scroll';
 import React, { useEffect, useState, useRef } from 'react';
 import styles from "./Header.module.css";
 
-export function Navbar() {
+export function Header() {
   const [isLinkMenuOpen, setIsLinkMenuOpen] = useState(false);
   const menuRef = useRef(null);
   const [isScrolled, setIsScrolled] = useState(false);
